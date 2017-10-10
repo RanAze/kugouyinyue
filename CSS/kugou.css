@@ -1,0 +1,1595 @@
+@charset "UTF-8";
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 共用部分 */
+.header, .search_wrapper {
+  height: 78px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+/* header部分公用css样式 */
+
+.header {
+  width: 1000px;
+  margin: 0 auto;
+}
+.logo, .topNav {
+  position: absolute;
+}
+.clearfix:after {
+	content:'';/**给复合的盒子加一个空内容，将复合的盒子撑起来。**/
+	display:block;
+	clear:both;
+}
+/* header部分css样式 */
+
+.logo {
+  display: inline-block;
+  height: 37px;
+  width: 153px;
+  background: url(../img/logo.png) no-repeat left top;
+  margin-top: 20px;
+}
+.logo a {
+  display: block;
+}
+
+/* search部分css样式 */
+
+.search_wrapper {
+  width: 300px;
+  height: 36px;
+  margin-left: 193px;
+  padding-top: 20px;
+  z-index: 9999;
+}
+.search_input {
+  position: relative;
+  width: 298px;
+  height: 34px;
+  border: 1px solid #ccc;
+  line-height: 34px;
+}
+.search_input input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 249px;
+  height: 24px;
+  line-height: 24px;
+  border: none;
+  margin-left: 14px;
+  padding: 5px 0;
+  color: #666;
+}
+.search_input .searh_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  background: 0 0;
+  outline: none;
+  cursor: pointer;
+}
+.search_input .searh_btn i {
+  display: block;
+  margin: 9px 0 0 9px;
+  width: 16px;
+  height: 16px;
+  background-position: -40px -56px;
+  cursor: pointer;
+}
+.search_icon {
+  background: url(../img/search.png) no-repeat;
+}
+.search_input .searh_btn i:hover {
+  background-position: -40px -86px;
+}
+
+/* topNav部分css样式 */
+
+.topNav {
+  top: 30px;
+  right: 0;
+  width: 402px;
+}
+.topNav ul {
+  float: left;
+  width: 250px;
+  border-right: 1px solid #e6e6e6;
+  padding-right: 11px;
+  text-align: right;
+}
+.topNav li {
+  float: left;
+  padding: 0 15px;
+}
+.topNav li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #777;
+}
+.topNav li a:hover{
+  color: #009af3;
+}
+.topNav .login_area {
+  position: relative;
+  float: left;
+  width: 110px;
+  margin-top: -5px;
+  margin-left: 30px;
+}
+.topNav .regin_btn, .topNav .login_btn {
+  float: left;
+  display: block;
+  width: 48px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.topNav .login_btn {
+  border: 1px solid #169af3;
+  color: #fff;
+  background-color: #169af3;
+  margin-right: 5px;
+}
+.topNav .login_btn:hover{
+  color: #fff;
+  border: 1px solid #158fe1;
+  background-color: #158fe1;
+}
+.topNav .regin_btn {
+  border: 1px solid #999;
+  color: #666;
+}
+.topNav .regin_btn:hover {
+  border: 1px solid #169af3;
+  color: #169af3;
+}
+/* nav部分css样式 */
+
+.nav {
+  height: 55px;
+  background: #2c323b;
+}
+.navMin {
+  width: 1000px;
+  height: 55px;
+  margin: 0 auto;
+  background: #2c323b;
+}
+.menuBox {
+  display: inline-block;
+  width: 520px;
+  height: 55px;
+  margin: 0 76px 0 0;
+  background: #2c323b;
+  font-size: 0;
+}
+.menuBox li {
+  background: #2c323b;
+  display: inline-block;
+  position: relative;
+}
+.menuBox .more {
+  background:url(../img/arrowMored.png) no-repeat 88px 27px;
+}
+.menuBox li a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 55px;
+  display: block;
+  padding: 0 40px;
+  color: #fff;
+}
+.nav .b:hover .more{
+    color: #fff;
+    background-color: #0c8ed9;
+    background: url(../img/arrowMoreu2.png) no-repeat 88px 27px;
+}
+.menuBox li:hover {
+  background: #0c8ed9;
+}
+
+.menuBox li ul {
+  display: none;
+  position: absolute;
+}
+.menuBox li ul li {
+  width: 100%;
+  height: 40px;
+}
+.menuBox li ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  background: #252b34;
+  font-size: 16px;
+  white-space: nowrap;
+  line-height: 40px;
+}
+.menuBox li ul li a:hover {
+  background: #2c323b;
+}
+.menuBox li:hover ul {
+  display: block;
+}
+
+/* 设置subNav样式 */
+
+.subNav {
+  display: inline-block;
+  font-size: 0;
+  width: 400px;
+}
+.subNav a {
+  display: inline-block;
+  line-height: 15px;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 0 0px 0px 40px;
+  color: #fff;
+}
+.subNav a:hover{
+  color: #14a9ff;
+}
+.subNav-Btn1 {
+  background: url(../img/sprite.png) no-repeat 20px -122px;
+}
+.subNav-Btn1:hover {
+  background-position: 20px -104px;
+}
+.subNav-Btn2 {
+  background: url(../img/sprite.png) no-repeat 20px -158px;
+}
+.subNav-Btn2:hover {
+  background-position: 20px -140px;
+}
+.subNav-Btn3 {
+  background: url(../img/sprite.png) no-repeat 20px -193px;
+}
+.subNav-Btn3:hover {
+  background-position: 20px -175px;
+}
+.subNav-Btn4 {
+  background: url(../img/sprite.png) no-repeat 20px -230px;
+}
+.subNav-Btn4:hover {
+  background-position: 20px -212px;
+}
+.subNav-Btn5 {
+  background: url(../img/sprite.png) no-repeat 20px -284px;
+}
+.subNav-Btn5:hover {
+  background-position: 20px -248px;
+}
+
+
+/* 设置footer样式 */
+
+.footer {
+  background: #2c323b;
+  padding-bottom: 50px;
+}
+.footerTxt {
+  text-align: center;
+  margin: 0 auto;
+  height: 46px;
+  background: #2c323b;
+  font-size: 0;
+  line-height: 50px;
+  border-bottom: 1px solid #3d424a;
+}
+.footerTxt a {
+  display: inline-block;
+  padding: 0 15px;
+  border-right: 1px solid #b19676;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  color: #b1b3b9;
+  cursor: pointer;
+}
+.main8Min a:hover, .footerTxt a:hover {
+  color: #009af3;
+}
+.footer .noborder {
+  border-right: 0;
+}
+.footer .footerMin {
+  width: 1000px;
+  margin: 40px auto 0;
+}
+.footer .footerMin p {
+  position: relative;
+  line-height: 30px;
+  text-align: center;
+  color: #b1b3b9;
+}
+.footer .footerIcon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 7px;
+  background: url(../img/footer_icon.png) no-repeat 0 0;
+}
+.footer .footerIcon2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 1px;
+  background: url(../img/logo_down.png) no-repeat 0 0;
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pageHome部分 */
+/* 设置subNav样式 */
+.pageHome .banner{
+  position: relative;
+  width:100%;
+  height: 445px;
+  margin: 0 auto;
+  overflow:hidden;
+}
+.pageHome .banner ul {
+  width:100%;
+  height: 445px;
+}
+.pageHome .bannerMin li{
+  display: none;
+  background-size:cover;
+  height:445px;
+  width:100%;
+  position: absolute;
+  top:0;
+  lef:0;
+}
+.pageHome .bannerMin .active{
+  display: block;
+}
+.pageHome .bannerMin .one{
+  background: url(../img/banner.jpg) center;
+}
+.pageHome .bannerMin .two{
+  background: url(../img/banner1.jpg) center;
+}
+.pageHome .bannerMin .three{
+  background: url(../img/banner2.jpg) center;
+}
+.pageHome .bannerMin .four{
+  background: url(../img/banner3.jpg) center;
+}
+.bannerMin .five{
+  background: url(../img/banner4.jpg) center;
+}
+.pageHome .bannerMin .six{
+  background: url(../img/banner5.jpg) center;
+}
+.pageHome .banner:hover a{
+  display: block;
+}
+.pageHome .prev{
+  display:none;
+    position: absolute;
+    top: 37%;
+    left:0;
+    width: 60px;
+    height: 120px;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -755px;
+}
+.pageHome .prev:hover{
+    background-position: 0 -880px;
+}
+.pageHome .next{
+  display:none;
+    position: absolute;
+    right:0;
+    top: 37%;
+    width: 60px;
+    height: 120px;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -1130px;
+}
+.pageHome .next:hover{
+    background-position: 0 -1005px;
+}
+.pageHome .PagesMin{
+    position: absolute;
+    bottom: 80px;
+    left :50%;
+    margin-left:-80px;
+    width: 160px;
+}
+.pageHome .PagesMin li{
+    background-position: 0 -37px;
+    float: left;
+    margin: 0 7px;
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    font-size: 0;
+    background: url(../img/sprite.png);
+    background-position: 0 -22px;
+}
+.pageHome .PagesMin .active{
+    background-position: 0 -37px;
+}
+/* 设置nav2样式 */
+.pageHome .banner-cover {
+  background: rgba(0,0,0,.5);
+  height: 64px;
+  width:100%;
+  position: absolute;
+  top:513px;
+  left: 0;
+}
+.pageHome .nav2 {
+  height: 64px;
+  width:100%;
+  position: absolute;
+  top:513px;
+}
+.pageHome .nav2-box {
+  margin: 0 auto;
+  width: 698px;
+  line-height: 64px;
+  height: 64px;
+}
+.pageHome .nav2 li {
+  display: inline-block;
+  line-height: 25px;
+}
+.pageHome .nav2 a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 16px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 40px 0 100px;
+  border-right: 1px solid #ccc;
+}
+.pageHome .nav2 .noborder {
+  border-right: 0;
+}
+.pageHome .nav2 .nav2-btn1 {
+  background: url(../img/nav-btn1.png) no-repeat 40px;
+}
+.pageHome .nav2 .nav2-btn2 {
+  background: url(../img/nav-btn2.png) no-repeat 40px;
+}
+.pageHome .nav2 .nav2-btn3 {
+  background: url(../img/nav-btn3.png) no-repeat 40px;
+}
+
+/* 设置mainMin样式 */
+
+.pageHome .mainMin {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* 设置itemTitle样式 */
+
+.pageHome .itemTitle {
+  height: 30px;
+  padding-bottom: 30px;
+}
+.pageHome .itemTitle h3 {
+  width: 120px;
+  height: 30px;
+  margin-right: 25px;
+  color: #555;
+  font-size: 25px;
+  float: left;
+}
+.pageHome .itemTitle h3 b {
+  font-weight: 400;
+  color: #009af3;
+}
+.pageHome .itemTitle .more {
+  margin-top: 7px;
+  color: #999;
+}
+
+/* 设置mainLeft样式 */
+
+.pageHome .mainLeft {
+  width: 660px;
+  height: 390px;
+  float: left;
+}
+.pageHome .productMin {
+  width: 668px;
+  height: 330px;
+}
+.pageHome .productLeft {
+  float: left;
+}
+
+/* 设置topTxt样式 */
+
+.pageHome .topTxt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 152px;
+  height: 30px;
+  line-height: 30px;
+  background: url(../img/topTxt-btn.png) no-repeat right center;
+  color: #fff;
+  text-align: right;
+}
+.pageHome .productMin .topTxt-icon {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: 0 -267px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+.pageHome .productMin .num {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  width: 55px;
+  height: 17px;
+}
+.pageHome .productBig {
+  display: inline-block;
+  width: 325px;
+  height: 325px;
+  margin: 0 5px 5px 0;
+  position: relative;
+}
+.pageHome .productBig img {
+  width: 325px;
+  height: 325px;
+}
+.pageHome .productBig .cover {
+  visibility: hidden;
+  width: 325px;
+  height: 325px;
+  background: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pageHome .productBig .playBtn {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  cursor: pointer;
+  margin-left: -18px;
+  margin-top: -18px;
+  background-image: url(../img/sprite.png);
+  background-position: 0 -401px;
+  width: 36px;
+  height: 36px;
+}
+.pageHome .productBig:hover .cover {
+  visibility: visible;
+}
+
+/* 设置bottomTxt样式 */
+
+.pageHome .productBig .bottomTxt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 309px;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, .5);
+  font-size: 14px;
+  height: 38px;
+}
+.pageHome .productBig .bottomTxt p {
+  width: 295px;
+  padding: 0px 8px 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* 设置productMid样式 */
+
+.pageHome .productMid {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  margin: 0 5px 5px 0;
+  position: relative;
+}
+.pageHome .productMid img {
+  width: 160px;
+  height: 160px;
+}
+.pageHome .productMid .cover {
+  visibility: hidden;
+  width: 160px;
+  height: 160px;
+  background: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pageHome .productMid .playBtn {
+  position: absolute;
+  top: 134px;
+  left: 134px;
+  cursor: pointer;
+  margin-left: -18px;
+  margin-top: -18px;
+  background-image: url(../img/sprite.png);
+  background-position: 0 -401px;
+  width: 36px;
+  height: 36px;
+}
+.pageHome .productMid:hover .cover {
+  visibility: visible;
+}
+
+/* 设置bottomMid-Txt样式 */
+
+.pageHome .productMid .bottomTxt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 142px;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, .5);
+  font-size: 14px;
+  height: 38px;
+}
+.pageHome .productMid .bottomTxt p {
+  width: 140px;
+  padding: 0px 8px 8px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* 设置mainRight样式 */
+
+.pageHome .mainRight {
+  width: 326px;
+  height: 390px;
+  float: right;
+}
+.pageHome .mainRightMin {
+  width: 326px;
+  height: 325px;
+}
+.pageHome .mainRightList {
+  width: 326px;
+  height: 98px;
+  margin-bottom: 15px;
+  background-color: #f6f6f6;
+}
+.pageHome .mainRight .pic {
+  width: 98px;
+  height: 98px;
+  float: left;
+  position: relative;
+}
+.pageHome .mainRight a {
+  display: inline-block;
+}
+.pageHome .mainRight .cover {
+  display: none;
+  width: 98px;
+  height: 98px;
+  background: rgba(0, 0, 0, .3);
+  position: absolute;
+}
+.pageHome .mainRight .playBtn {
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 32px;
+  background-image: url(../img/sprite.png);
+  background-position: 0 -401px;
+  width: 36px;
+  height: 36px;
+}
+.pageHome .mainRight li:hover .cover {
+  display: block;
+}
+.pageHome .mainRight .mainRight-content {
+  display: inline-block;
+  width: 200px;
+  height: 72px;
+  padding: 13px 10px;
+  float: left;
+}
+.pageHome .mainRight dt {
+  overflow: hidden;
+  line-height: 24px;
+  color: #333;
+  font-weight: 700;
+}
+.pageHome .mainRight dd {
+  overflow: hidden;
+  width: 180px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #555;
+}
+.pageHome .clear {
+  clear: both;
+}
+
+/* 设置main2样式 */
+
+.pageHome .main2Min {
+  width: 1000px;
+  height: 80px;
+  margin: 40px auto;
+}
+
+/* 设置main3样式 */
+
+.pageHome .main3Min {
+  width: 1000px;
+  margin: 0 auto 0;
+}
+
+/* 设置main3-left样式 */
+
+.pageHome .main3-left {
+  float: left;
+  display: inline-block;
+  width: 650px;
+  height: 375px;
+  margin-right: 20px;
+}
+.pageHome .itemTitle-menu{
+    line-height: 30px;
+    float:left;
+}
+.pageHome .itemTitle-menu .menuItem:hover{
+    color: #009af3;
+}
+.pageHome .itemTitle-menu .menuItem{
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.pageHome .main3-left .playAll{
+    float: right;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    padding: 10px 10px;
+    color: #555;
+}
+.pageHome .playAll:hover {
+    color: #009af3;
+    border: 1px solid #009af3;
+}
+.pageHome .icon-play{
+    display: inline-block;
+    background: url(../img/icon_splice.png) no-repeat;
+    background-position: 0px 0px;
+    width: 12px;
+    height: 14px;
+    vertical-align: middle;
+    margin: -4px 5px 0 0;
+}
+.pageHome .playAll:hover .icon-play{
+    background-position: 0 -30px;
+}
+.pageHome .main3Bottom {
+  border-bottom: 1px solid #f0f0f0;
+}
+.pageHome .main3-left ul {
+  width: 650px;
+  height: 290px;
+  margin-top: 10px;
+}
+.pageHome .main3-left li {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10px;
+  color: #333;
+}
+.pageHome .main3-left a {
+  font-size: 13px;
+  line-height: 35px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pageHome .main3-left-l {
+  float: left;
+}
+.pageHome .main3-left-R {
+  float: right;
+}
+.pageHome .main3-left li .icon-share {
+  display: block;
+    right: 55px;
+    width: 21px;
+    height: 15px;
+    float: left;
+    margin:12px 0 0 10px;
+    background: url(../img/icon_splice.png) no-repeat;
+    background-position: -120px -240px;
+}
+.pageHome .main3-left li .icon-play {
+  display: none;
+  position: absolute;
+  top:13px;
+  right: 88px;
+  width: 12px;
+  height: 14px;
+  background: url(../img/icon_splice.png) no-repeat;
+  background-position: 0px 0px;
+}
+.pageHome .main3-left li .icon-play:hover {
+    background-position: 0 -30px;
+}
+.pageHome .main3-left li .icon-download{
+  display: none;
+  position: absolute;
+  top:10px;
+  right: 63px;
+  width: 15px;
+  height: 15px;
+  background:url(../img/icon_splice.png);
+  background-position: -90px 0;
+}
+.pageHome .main3-left li .icon-download:hover {
+    background-position: -90px -30px;
+}
+.pageHome .main3-left li:hover .icon-play,.main3-left li:hover .icon-download{
+  display: block;
+}
+.pageHome .main3-left li:hover .icon-share{
+  display: none;
+}
+/* 设置main3-page样式 */
+.pageHome .main3 .pages {
+    display: inline-block;
+    _display: inline;
+    height: 9px;
+    padding-left: 290px;
+    margin: 10px auto 0;
+    font-size: 12px;
+    color: #8d8d8d;
+}
+.pageHome .main3 .prevs {
+    float: left;
+    display: block;
+    width: 6px;
+    height: 9px;
+    line-height: 9px;
+    margin-top: 5px;
+    text-indent: -999em;
+    background:url(../img/pageChange.jpg) no-repeat 0 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.pageHome .main3 .page {
+    display: inline;
+    float: left;
+    margin: 3px 15px;
+    font-size: 12px;
+    color: #8d8d8d;
+}
+.pageHome .main3 .nexts {
+    float: left;
+    display: block;
+    width: 6px;
+    height: 9px;
+    line-height: 9px;
+    margin-top: 5px;
+    text-indent: -999em;
+    background:url(../img/pageChange.jpg) no-repeat 0 0;
+    cursor: pointer;
+}
+.pageHome .main3 .next2{
+    background-position: -13px 0;
+    height: 9px;
+}
+/* 设置main3-right样式 */
+
+.pageHome .main3-right {
+  float: right;
+  display: inline-block;
+  width: 320px;
+  height: 400px;
+}
+.pageHome .main3-rightMin {
+  width: 320px;
+  height: 360px;
+}
+.pageHome .main3-rightMin .box1 {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  height: 175px;
+}
+.pageHome .main3-rightMin .box1 .Cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,.2);
+}
+.pageHome .main3-rightMin .box1:hover .Cover {
+  display: block;
+}
+.pageHome .main3-rightMin .playBtn {
+    display:none;
+    position: absolute;
+    top: 38%;
+    left: 42%;
+    text-indent: -999em;
+    cursor: pointer;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -542px;
+    width: 48px;
+    height: 48px;
+}
+.pageHome .main3-rightMin .box1:hover .playBtn {
+  display:block;
+}
+.pageHome .main3-rightMin .playBtn:hover{
+  background-position: 0 -489px;
+}
+.pageHome .main3-rightMin .box1 .bottomTxt{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6px 8px;
+    background: rgba(0,0,0,.5);
+    font-size: 14px;
+    color: #fff;
+    height: 38px;
+    width: 304px;
+}
+.pageHome .bottomTxt1,.bottomTxt2{
+  line-height: 19px;
+  font-size:13px;
+  font-weight: bold;
+}
+.pageHome .main3-rightMin .box2 {
+  position: relative;
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  width: 154px;
+  height: 125px;
+}
+.pageHome .main3-rightMin .box2 .Cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,.2);
+}
+.pageHome .main3-rightMin .box2:hover .Cover {
+  display: block;
+}
+.pageHome .main3-rightMin .box2 .playBtn {
+    position: absolute;
+    top: 38%;
+    left: 42%;
+    text-indent: -999em;
+    cursor: pointer;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -542px;
+    width: 48px;
+    height: 48px;
+}
+.pageHome .main3-rightMin .box2:hover .playBtn {
+  display:block;
+}
+.pageHome .main3-rightMin .box2 .playBtn:hover{
+  background-position: 0 -489px;
+}
+.pageHome .main3-rightMin .box2 .bottomTxt{
+    position: absolute;
+    bottom:-51px;
+    left: 0;
+    padding: 6px 8px;
+    background: #fff;
+    color: #666;
+    font-size: 14px;
+    height: 38px;
+    width: 144px;
+}
+.pageHome .main3-rightMin .box2 .bottomTxt1,.bottomTxt2{
+  line-height: 19px;
+  font-size:13px;
+}
+/* 设置main4样式 */
+
+.pageHome .main4Min {
+  width: 1000px;
+  height: 80px;
+  margin: 40px auto;
+}
+
+/* 设置main5样式 */
+
+.pageHome .main5Min {
+  width: 1000px;
+  margin: 40px auto 0;
+}
+
+/* 设置main5-left样式 */
+
+.pageHome .main5-left {
+  display: inline-block;
+  width: 650px;
+  margin-right: 21px;
+}
+.pageHome .main5-left ul {
+    width: 685px;
+}
+.pageHome .main5-left li {
+  position: relative;
+    position: relative;
+  float: left;
+  cursor: pointer;
+    width: 100px;
+    margin-right: 37px;
+    margin-bottom: 25px;
+}
+.pageHome .main5-left ul .main5-left li:nth-child(4),.main5-left ul .main5-left li:nth-child(8){
+  margin-right:0;
+}
+.pageHome .main5-left li a {
+  text-decoration:none;/*text-decoration:none;加在别的地方没有效果  */
+}
+.pageHome .main5-left li .Cover {
+  display: none;
+    position: absolute;
+    top:0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgba(0,0,0,.2);
+    background-size: 100% 100%;
+}
+.pageHome .main5-left li:hover .Cover {
+  display: block;
+}
+.pageHome .main5-left li .playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -21px;
+    margin-left: -21px;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -442px;
+    width: 42px;
+    height: 42px;
+}
+.pageHome .main5-left li .radioLogo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+.pageHome .main5-left li .radioItem {
+    width: 100px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+/* 设置main5-right样式 */
+
+.pageHome .main5-right {
+  display: inline-block;
+  width: 325px;
+  float: right;
+}
+.pageHome .main5-right .itemContent{
+    overflow: hidden;
+    width: 325px;
+}
+.pageHome .main5-right .itemTitle .tabT {
+    width: 330px;
+    line-height: 30px;
+}
+.pageHome .itemTitle .tabT span {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.pageHome .tabT span:hover{
+    color: #009af3;
+}
+.pageHome .itemTitle .more {
+    margin-top: 7px;
+    color: #999;
+    float:right;
+}
+.pageHome .main5-right .itemTitle .more {
+    margin-top: 0px;
+    color: #999;
+}
+.pageHome .main5-right .firstUl {
+    width: 100%;
+    position: relative;
+    height: 320px;
+}
+.pageHome .main5-right .firstUl li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 330px;
+    height: 320px;
+}
+.pageHome .main5-right .secondUl {
+    position: relative;
+    width: 330px;
+    height: 270px;
+}
+.pageHome .main5-right .secondUl li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 270px;
+}
+.pageHome .secondUl li:nth-child(2+5){
+  margin-right:0;
+}
+.pageHome .main5-right .cptMid {
+    width: 160px;
+    height: 160px;
+    padding: 0;
+    margin: 0 5px 5px 0;
+    position: relative;
+}
+.pageHome .main5-right .cpt{
+  float: left;
+}
+.pageHome .main5-right .cptMid  img {
+    width: 160px;
+    height: 160px;
+    position:relative;
+    vertical-align: middle;
+}
+.pageHome .main5-right .cptMid  .Cover {
+  display: none;
+    width: 160px;
+    height: 160px;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pageHome .main5-right .cptMid:hover  .Cover {
+  display: block;
+}
+.pageHome .main5-right .cptMid  .cptB {
+    background: url(../img/album_cpt_bg.png) no-repeat left bottom;
+    width: 144px;
+    padding: 6px 8px;
+    font-size: 14px;
+    height: 38px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.pageHome .main5-right .cptMid .songListSinger {
+    line-height: 50px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pageHome .main5-right .cptSmall {
+    width: 105px;
+    height: 105px;
+    padding: 0;
+    margin: 0 5px 0 0;
+    position: relative;
+}
+.pageHome .main5-right .cptSmall  img {
+    width: 105px;
+    height: 105px;
+    position:relative;
+    vertical-align: middle;
+}
+.pageHome .main5-right .cptSmall  .Cover {
+  display:none;
+    width: 105px;
+    height: 105px;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pageHome .main5-right .cptSmall:hover .Cover{
+  display:block;
+}
+.pageHome .main5-right .cptSmall  .cptB {
+    background: url(../img/album_cpt_bg.png) no-repeat left bottom;
+    width: 89px;
+    padding: 6px 8px;
+    font-size: 14px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.pageHome .main5-right .cptSmall .songListSinger {
+    line-height: 40px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pageHome .main5-right .tab {
+    position: relative;
+    padding-top: 17px;
+    height: 6px;
+    line-height: 6px;
+    text-align: center;
+}
+.pageHome .main5-right .tab a {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-image: url(../img/sprite.png);
+    background-position: 0 -11px;
+    width: 6px;
+    height: 6px;
+    text-decoration: none;
+}
+.pageHome .main5-right .tab .date2{
+  background-position: 0 0px;
+}
+
+/* 设置main6样式 */
+
+.pageHome .main6Min {
+  width: 1000px;
+  height: 80px;
+  margin: 40px auto;
+}
+
+/* 设置main7样式 */
+
+.pageHome .main7Min {
+  width: 1000px;
+  margin: 40px auto;
+}
+.pageHome .main7-picMin a {
+  display: inline-block;
+  width: 130px;
+  height: 58px;
+  margin: 3px;
+  border: 1px dashed #CCCCCC;
+}
+.pageHome .main7-pic1 {
+  background: url(../img/main7-pic1.jpg);
+}
+.pageHome .main7-pic2 {
+  background: url(../img/main7-pic2.jpg);
+}
+.pageHome .main7-pic3 {
+  background: url(../img/main7-pic3.jpg);
+}
+.pageHome .main7-pic4 {
+  background: url(../img/main7-pic4.jpg);
+}
+.pageHome .main7-pic5 {
+  background: url(../img/main7-pic5.jpg);
+}
+.pageHome .main7-pic6 {
+  background: url(../img/main7-pic6.jpg);
+}
+.pageHome .main7-pic7 {
+  background: url(../img/main7-pic7.jpg);
+}
+.pageHome .main7-pic8 {
+  background: url(../img/main7-pic8.jpg);
+}
+.pageHome .main7-pic9 {
+  background: url(../img/main7-pic9.jpg);
+}
+.pageHome .main7-pic10 {
+  background: url(../img/main7-pic10.jpg);
+}
+.pageHome .main7-pic11 {
+  background: url(../img/main7-pic11.jpg);
+}
+.pageHome .main7-pic12 {
+  background: url(../img/main7-pic12.jpg);
+}
+.pageHome .main7-pic13 {
+  background: url(../img/main7-pic13.jpg);
+}
+.pageHome .main7-pic14 {
+  background: url(../img/main7-pic14.jpg);
+}
+.pageHome .main7-pic15 {
+  background: url(../img/main7-pic15.jpg);
+}
+.pageHome .main7-pic16 {
+  background: url(../img/main7-pic16.jpg);
+}
+.pageHome .main7-pic17 {
+  background: url(../img/main7-pic17.jpg);
+}
+.pageHome .main7-pic18 {
+  background: url(../img/main7-pic18.jpg);
+}
+.pageHome .main7-pic19 {
+  background: url(../img/main7-pic19.jpg);
+}
+.pageHome .main7-pic20 {
+  background: url(../img/main7-pic20.jpg);
+}
+.pageHome .main7-pic21 {
+  background: url(../img/main7-pic21.jpg);
+}
+
+/* 设置main样式 */
+
+.pageHome .main8Min {
+  width: 1000px;
+  margin: 40px auto;
+}
+.pageHome .main8Min a {
+  overflow: hidden;
+  display: inline-block;
+  width: 121px;
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+.pageHome .main8Min .more {
+  width: 30px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pageClient部分开始 */
+.pageClient a {
+    text-decoration: none;
+    cursor: pointer;
+}
+/*title标题部分*/
+.pageClient .title {
+    width: 1000px;
+    height: 25px;
+    padding: 7.5px 0px;
+    line-height: 25px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.pageClient .title ul, .title li, .local {
+    float: left;
+    color: #999;
+}
+.pageClient .title li {
+    height: 25px;
+    line-height: 25px;
+    color: #999;
+}
+.pageClient .title li a {
+    color: #999;
+    text-decoration: none;
+}
+/*pro产品部分*/
+.pageClient .pro_wrap {
+    background-color: #f8f8f8;
+}
+.pageClient .pro_list {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px 0px 20px;
+    overflow: hidden;
+}
+.pageClient .pro_ul {
+    width: 1200px;
+}
+.pageClient .recommend_products {
+    position: relative;
+    width: 280px;
+    height: 215px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.04);
+}
+.pageClient .fl, .navWrap .homeNav, .navWrap .homeNav li, .navWrap .subNav li {
+    float: left;
+}
+.pageClient .recommend_products .versions {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    color: #c3c3c3;
+    font-size: 14px;
+}
+.pageClient .recommend_products .type_Logo {
+    display: block;
+    margin-top: 9px;
+    height: 115px;
+}
+.pageClient .recommend_products .typesImg {
+    display: block;
+    text-align: center;
+}
+.pageClient .recommend_products .product_title {
+    display: block;
+    margin-top: 23px;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+}
+.pageClient .recommend_products .tuijian_product_description {
+    margin: 3px 0px 0px 0px;
+    text-align: center;
+    color: #a2a2a2;
+    font-size: 14px;
+}
+.pageClient .recommend_products .tuijian_product_download {
+    display: block;
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 auto;
+    margin-top: 22px;
+    background-image: none;
+    background-color: #28a9f3;
+    color: #fff;
+    text-align: center;
+}
+.pageClient .recommend_products .tuijian_product_download .downIcon {
+    padding-left: 25px;
+    background: url(../img/downloadIcon.png) no-repeat left -1px;
+}
+.pageClient .recommend_products:hover {
+    box-shadow: 0 0 18px rgba(0,0,0,0.25);
+}
+.pageClient .recommend_products .tuijian_product_download:hover {
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #0090e2;
+}
+/*more-product下载部分*/
+.pageClient .tuijian_products_other_wrap {
+    background-color: #eeeff0;
+}
+.pageClient .tuijian_products_other {
+    display: block;
+    width: 1000px;
+    margin: 0px auto;
+    padding: 50px 0px 30px 0px;
+}
+.pageClient .tuijian_product_other_item {
+    position: relative;
+    width: 320px;
+    height: 92px;
+    margin-bottom: 20px;
+    padding: 16px 0px 16px 0px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.04);
+}
+.pageClient .mr_20 {
+    margin-right: 20px;
+}
+.pageClient .clearfix:after {
+	content:'';/**给复合的盒子加一个空内容，将复合的盒子撑起来。**/
+	display:block;
+	clear:both;
+}
+.pageClient element.style {
+    background: url(http://imge.kugou.com/commendpic/20170421/20170421181725411450.png) no-repeat center center;
+}
+.pageClient .tuijian_product_other_item a.icon_img {
+    width: 110px;
+    height: 100%;
+    text-indent: -99em;
+    background-position: 50% 50%;
+}
+.pageClient .fl, .navWrap .homeNav, .navWrap .homeNav li, .navWrap .subNav li {
+    float: left;
+}
+.pageClient .tuijian_product_other_description {
+    width: 175px;
+}
+.pageClient .tuijian_product_title {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 3px;
+    display: block;
+}
+.pageClient .tuijian_product_version {
+    color: #a2a2a2;
+    font-size: 14px;
+}
+.pageClient .tuijian_product_other_download {
+    position: absolute;
+    top: 79px;
+    left: 110px;
+    width: 200px;
+    height: 26px;
+}
+.pageClient .tuijian_product_other_download .tuijian_product_download {
+    float: left;
+    display: block;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    margin-right: 10px;
+    background-color: #28a9f3;
+    color: #fff;
+    text-align: center;
+}
+.pageClient .tuijian_product_other_download .tuijian_product_other_version {
+    float: left;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #c3c3c3;
+    vertical-align: middle;
+}
+.pageClient .pro1{
+  background:url(../img/pro-1.png) no-repeat center center;
+}
+.pageClient .pro2{
+  background:url(../img/pro-2.png) no-repeat center center;
+}
+.pageClient .pro3{
+  background:url(../img/pro-3.png) no-repeat center center;
+}
+.pageClient .pro4{
+  background:url(../img/pro-4.png) no-repeat center center;
+}
+.pageClient .pro5{
+  background:url(../img/pro-5.png) no-repeat center center;
+}
+.pageClient .pro6{
+  background:url(../img/pro-6.png) no-repeat center center;
+}
+.pageClient .pro7{
+  background:url(../img/pro-7.png) no-repeat center center;
+}
+.pageClient .pro8{
+  background:url(../img/pro-8.png) no-repeat center center;
+}
+.pageClient .pro9{
+  background:url(../img/pro-9.png) no-repeat center center;
+}
+.pageClient .pro10{
+  background:url(../img/pro-10.png) no-repeat center center;
+}
+.pageClient .pro11{
+  background:url(../img/pro-11.png) no-repeat center center;
+}
+.pageClient .pro12{
+  background:url(../img/pro-12.png) no-repeat center center;
+}
+/* hover效果*/
+.pageClient .tuijian_product_other_item:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+.pageClient .tuijian_product_other_download .tuijian_product_download:hover {
+    background-color: #0090e2;
+}
